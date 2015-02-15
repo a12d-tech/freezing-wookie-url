@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
+
+  scope :user do
+    resources :links, only: [:new, :create, :show]
+  end
 
   root 'static_pages#home'
 

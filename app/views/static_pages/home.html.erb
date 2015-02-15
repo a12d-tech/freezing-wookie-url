@@ -5,6 +5,9 @@
   <% if user_signed_in? %>
     You are logged in
     <div>
+      <%= link_to 'Create short url', new_link_path %>
+    </div>
+    <div>
       <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
     </div>
 
