@@ -5,7 +5,7 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  embeds_many :links
+  has_many :links
 
   ## Database authenticatable
   field :email,              type: String, default: ""

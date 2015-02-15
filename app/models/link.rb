@@ -4,7 +4,7 @@ class Link
 
   before_save :generate_slug
 
-  embedded_in :user, inverse_of: :links
+  belongs_to :user
 
   field :original_url, type: String, default: ""
   field :slug,         type: String, default: ""
