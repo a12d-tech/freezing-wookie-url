@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :links, only: [:new, :create, :show]
   end
 
+  get '/:short_url_slug' => 'links#redirect'
+
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

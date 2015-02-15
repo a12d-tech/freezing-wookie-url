@@ -18,7 +18,12 @@ class LinksController < ApplicationController
   end
 
   def show
-    @link = current_user.links.find(params[:id])
+    @link = Link.find(params[:id])
+  end
+
+  def redirect
+    @link = Link.find_by(slug: params[:short_url_slug])
+    redirect_to @link.original_url
   end
 
   private
