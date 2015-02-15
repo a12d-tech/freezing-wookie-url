@@ -1,2 +1,15 @@
 <h1>Welcome to this url shortener</h1>
 <p>Nice to see you ;)</p>
+
+<p>
+  <% if user_signed_in? %>
+    You are logged in
+    <div>
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    </div>
+
+  <% else %>
+    <%= link_to "Log in", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %>
+  <% end %>
+</p>
