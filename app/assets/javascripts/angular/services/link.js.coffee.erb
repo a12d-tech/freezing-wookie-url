@@ -1,0 +1,10 @@
+@freezingWookie.service 'Link', ['$http', ($http)->
+
+  host     = "<%= ENV.fetch('HOSTNAME') %>"
+  resource = "/api/links"
+  urlRoot  = host + resource
+
+  create: (url) ->
+    $http.post(urlRoot, "link": {"original_url": url})
+
+]

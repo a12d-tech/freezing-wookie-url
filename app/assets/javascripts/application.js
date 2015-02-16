@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
+// can conflicts with angularjs
+// require turbolinks
+
+//= require angular
+//= require angular-route
+
+//= require 'angular/app'
+//= require 'angular/routes'
+//= require 'angular/services/link'
+//= require 'angular/controllers/links_ctrl'
+
 //= require_tree .
