@@ -18,7 +18,7 @@ class Link
   validates :user,         presence: true
 
   def short_url
-    "#{ENV.fetch('HOSTNAME')}#{slug}"
+    "#{ENV.fetch('HOSTNAME')}/#{slug}"
   end
 
   def viewed
