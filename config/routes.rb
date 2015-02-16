@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  scope :user do
-    resources :links, only: [:new, :create, :show]
+  namespace :api do
+    resources :links, only: [:create, :show]
   end
 
-  get '/:short_url_slug' => 'links#redirect'
+  get 'user/links' => 'redirection#index', as: 'links'
+
+  get '/:short_url_slug' => 'redirection#redirect'
 
   root 'static_pages#home'
 

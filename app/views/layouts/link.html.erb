@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="freezingWookie">
 <head>
   <title>FreezingWookieUrl</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-controller="LinksController">
 
-  <%= render "flashes" %>
-
-  <%= yield %>
+  <div ng-view>
+  </div>
 
   <%= javascript_include_tag 'application' %>
 
