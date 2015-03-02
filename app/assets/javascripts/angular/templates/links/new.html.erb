@@ -1,20 +1,19 @@
 <h1>Let's create a shortened url</h1>
 
 <div>
-  <form name="linkForm" ng-controller="LinkFormController as linkFormCtrl"
-    ng-submit="linkForm.$valid && linkFormCtrl.addLink()" >
+  <form name="linkForm"
+        ng-submit="linkForm.$valid && addLink()" >
 
-    <input type="url" ng-model="linkFormCtrl.originalUrl" placeholder="Enter an url" required/>
+    <input type="url" ng-model="originalUrl" placeholder="Enter an url" required/>
     <input type="submit" value="Create short url" />
   </form>
 </div>
 
-<div>
-  <ul>
-    <li ng-repeat="l in link">
-      {{ l.original_url }} -> <a href="{{ l.short_url }}">{{ l.short_url }}</a>
-    </li>
-  </ul>
+<div ng-show="link">
+  <h4>Result :</h4>
+  <p>
+    {{ link.original_url }} -> <a href="{{ link.short_url }}">{{ link.short_url }}</a>
+  </p>
 </div>
 
 <a href="/">Home</a>
