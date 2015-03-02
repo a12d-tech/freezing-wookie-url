@@ -16,8 +16,8 @@
 // can conflicts with angularjs
 // require turbolinks
 
-//= require angular
-//= require angular-route
+//= require angular/angular
+//= require angular-route/angular-route
 
 //= require 'angular/app'
 //= require 'angular/routes'
