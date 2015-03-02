@@ -1,5 +1,6 @@
 freezingWookie = angular.module('freezingWookie', [
   "ngRoute"
+  "templates"
   "routesModule"
   "servicesModule"
   "controllersModule"

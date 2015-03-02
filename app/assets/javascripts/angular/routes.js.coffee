@@ -4,7 +4,7 @@ routes.config ['$routeProvider', ($routeProvider) ->
 
   $routeProvider
     .when "/",
-      templateUrl: '../templates/links/new.html'
+      templateUrl: 'links/new.html'
 
     .otherwise
       redirectTo: '/'
