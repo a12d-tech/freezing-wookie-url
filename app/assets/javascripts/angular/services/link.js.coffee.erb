@@ -1,10 +1,13 @@
-@freezingWookie.service 'Link', ['$http', ($http)->
+services = angular.module('servicesModule')
 
-  host     = "<%= ENV.fetch('HOSTNAME') %>"
-  resource = "/api/links"
-  urlRoot  = host + resource
+services.service 'Link', ['$http',
+  ($http)->
 
-  create: (url) ->
-    $http.post(urlRoot, "link": {"original_url": url})
+    host     = "<%= ENV.fetch('HOSTNAME') %>"
+    resource = "/api/links"
+    urlRoot  = host + resource
+
+    create: (url) ->
+      $http.post(urlRoot, "link": {"original_url": url})
 
 ]

@@ -1,19 +1,23 @@
-@freezingWookie.controller "LinksController", ['$scope', ($scope) ->
-  
-  $scope.link = []
+controllers = angular.module('controllersModule')
+
+controllers.controller "LinksController", ['$scope',
+  ($scope)->
+
+    $scope.link = []
 
 ]
 
-@freezingWookie.controller "LinkFormController", ['$scope', 'Link', ($scope, Link) ->
-  
-  @originalUrl = ''
+controllers.controller "LinkFormController", ['$scope', 'Link',
+  ($scope, Link)->
 
-  @addLink = ->
-    url = @originalUrl
+    $scope.originalUrl = ''
 
-    Link.create(url).then (response)->
-      $scope.link.push response.data.link
+    $scope.addLink = ->
+      url = $scope.originalUrl
 
-    @originalUrl = ''
+      Link.create(url).then (response)->
+        $scope.link.push response.data.link
+
+      $scope.originalUrl = ''
 
 ]
