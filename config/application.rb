@@ -32,5 +32,12 @@ module FreezingWookieUrl
     # config.active_record.raise_in_transactional_callbacks = true
     
     config.autoload_paths << Rails.root.join('lib')
+
+    # add bower dependencies
+    config.assets.paths << Rails.root.join("vendor", "assets", "bower_components")
+
+    # add angular-rails-templates (gem) config
+    config.angular_templates.ignore_prefix  = %w(angular/templates/)
+
   end
 end
