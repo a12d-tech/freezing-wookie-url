@@ -20,9 +20,4 @@
 //= require angular-route/angular-route
 //= require angular-rails-templates
 
-//= require 'angular/app'
-//= require 'angular/routes'
-//= require 'angular/services/link'
-//= require 'angular/controllers/links_ctrl'
-
 //= require_tree .
