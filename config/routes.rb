@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'user/links' => 'redirection#index', as: 'links'
 
-  get '/:short_url_slug' => 'redirection#redirect'
+  get '/:url_slug' => 'redirection#redirect'
 
   root 'static_pages#home'
 
